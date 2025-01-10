@@ -225,8 +225,8 @@ class Health{
 class Score{
     constructor(){
         this.score = 0;
-        this.best_score = localStorage.getItem("com.github.Eeung.infinityStairs.bestScore");
-        this.best_player = localStorage.getItem("com.github.Eeung.infinityStairs.bestPlayer");
+        this.best_score = localStorage.getItem("io.github.eeung.infinityStairs.bestScore");
+        this.best_player = localStorage.getItem("io.github.eeung.infinityStairs.bestPlayer");
     }
     updateScore(){
         $score.innerText = ++this.score;
@@ -239,8 +239,8 @@ class Score{
     setBestScore(){
         let score = JSON.parse($score.innerText);
         if(this.best_score<score){
-            localStorage.setItem("com.github.Eeung.infinityStairs.bestScore",score);
-            localStorage.setItem("com.github.Eeung.infinityStairs.bestPlayer", prompt('신기록!\n닉네임을 입력하세요.'));
+            localStorage.setItem("io.github.eeung.infinityStairs.bestScore",score);
+            localStorage.setItem("io.github.eeung.infinityStairs.bestPlayer", prompt('신기록!\n닉네임을 입력하세요.'));
         }
     }
 }
